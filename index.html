@@ -790,6 +790,47 @@ a:focus-visible {
             line-height: 1.75;
         }
 
+
+        .office-card {
+            margin-top: 16px;
+            padding: 25px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+            border: 1px solid var(--line);
+            border-radius: 17px;
+            background: linear-gradient(145deg, #102e50, #0a213b);
+        }
+
+        .office-card h3 {
+            margin: 6px 0 9px;
+            font-size: 21px;
+        }
+
+        .office-card address {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+            font-style: normal;
+        }
+
+        .office-card .button {
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 600px) {
+            .office-card {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 21px;
+            }
+
+            .office-card .button {
+                width: 100%;
+            }
+        }
   </style>
  </head>
  <body>
@@ -1091,6 +1132,14 @@ a:focus-visible {
         Start a WhatsApp conversation &nearrow;
        </a>
       </div>
+     </div>
+     <div class="office-card">
+      <div>
+       <div class="eyebrow">Visit us</div>
+       <h3>Our registered office</h3>
+       <address>FF-5, Everest Hub, opp. Narayan Garden Road, New Alkapuri, Gulmohar West, Gotri, Vadodara, Gujarat 390023</address>
+      </div>
+      <a class="button primary" href="https://www.google.com/maps/search/?api=1&query=FF-5%2C%20Everest%20Hub%2C%20opp.%20Narayan%20Garden%20Road%2C%20New%20Alkapuri%2C%20Gulmohar%20West%2C%20Gotri%2C%20Vadodara%2C%20Gujarat%20390023" target="_blank" rel="noopener noreferrer" aria-label="Find Dreamz Big Realty registered office on Google Maps">📍 Get Directions ↗</a>
      </div>
     </section>
    </main>
