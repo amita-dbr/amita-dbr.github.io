@@ -628,6 +628,127 @@ a:focus-visible {
     min-height: 43px;
     background: rgba(255,255,255,.035);
 }
+
+/* Social profiles directly above the portrait */
+.visual {
+    flex-direction: column;
+    gap: 20px;
+}
+.hero-socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+    z-index: 3;
+}
+.hero-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 11px;
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 999px;
+    background: #102d4d;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    transition: border-color .2s, background .2s;
+}
+.hero-socials a:hover {
+    border-color: var(--orange);
+    background: #183a5b;
+}
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 26px;
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    background: linear-gradient(145deg,#102e50,#0a213b);
+}
+.review-source {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+.review-score {
+    font-size: clamp(35px, 4vw, 54px);
+    line-height: 1;
+    font-weight: 850;
+}
+.review-stars { display: block; margin-top: 10px; font-size: 20px; color: #ffb154; letter-spacing: .12em; }
+.review-description { margin: 0; color: var(--muted); font-size: 14px; }
+.review-card .button { align-self: flex-start; margin-top: 10px; }
+@media (max-width: 600px) {
+    .hero-socials { gap: 7px; }
+    .hero-socials a { font-size: 11px; padding: 8px 10px; }
+    .review-grid { grid-template-columns: 1fr; }
+    .review-card { padding: 21px; }
+}
+
+
+/* Social links sit below the hero buttons, alongside the portrait. */
+.visual {
+    flex-direction: row;
+    gap: 0;
+}
+.hero-links-block {
+    margin-top: 30px;
+    max-width: 530px;
+}
+.hero-links-label {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+.hero-socials {
+    justify-content: flex-start;
+    gap: 9px;
+}
+.hero-socials a {
+    font-size: 12px;
+    padding: 10px 13px;
+    white-space: nowrap;
+}
+.request-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    color: #ffb773;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(245,130,32,.45);
+    padding-bottom: 3px;
+}
+.request-link:hover { color: var(--white); }
+.property-form-button { margin-top: 16px; }
+@media (max-width: 800px) {
+    .hero-socials a { padding: 9px 11px; font-size: 11px; }
+}
+@media (max-width: 600px) {
+    .hero-links-block { margin-top: 25px; }
+    .hero-socials { justify-content: center; }
+    .hero-socials a { font-size: 12px; }
+    .request-link { justify-content: center; }
+}
   </style>
  </head>
  <body>
@@ -673,6 +794,18 @@ a:focus-visible {
         ✉ &nbsp;Email
        </a>
       </div>
+      <div class="hero-links-block">
+       <span class="hero-links-label">Connect with us</span>
+       <nav class="hero-socials" aria-label="Social media and reviews">
+        <a href="https://www.google.com/search?q=dreamz%20big%20realty%20vadodara%20reviews" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews">★ <span>Reviews</span></a>
+        <a href="https://www.instagram.com/amitadahiya/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎ <span>Instagram</span></a>
+        <a href="https://www.facebook.com/share/1EC4FgjYcy/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f <span>Facebook</span></a>
+        <a href="https://www.linkedin.com/in/amita-dahiya-40314a198/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in <span>LinkedIn</span></a>
+        <a href="https://www.youtube.com/@dreamzbigrealty4709" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶ <span>YouTube</span></a>
+        <a href="https://www.justdial.com/Vadodara/Dreamz-Big-Realty-Opposite-Narayan-Garden-Gotri-Road/0265PX265-X265-190430145220-T1Q8_BZDET" target="_blank" rel="noopener noreferrer" aria-label="Justdial">JD <span>Justdial</span></a>
+       </nav>
+      </div>
+      <a class="request-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdmgzllD2il18-OdEeh8WHJdTkQA3Lx56KWXdgNKtBn56uWjQ/viewform" target="_blank" rel="noopener noreferrer">Tell us your property requirements <span aria-hidden="true">↗</span></a>
      </div>
      <div class="visual">
       <div class="portrait">
@@ -776,6 +909,29 @@ a:focus-visible {
       </article>
      </div>
     </section>
+    <section class="section" id="reviews">
+     <div class="section-head">
+      <div>
+       <div class="eyebrow">Client feedback</div>
+       <h2>What clients say</h2>
+      </div>
+      <p class="section-note">See customer ratings and read reviews on the original platforms.</p>
+     </div>
+     <div class="review-grid">
+      <article class="review-card">
+       <div class="review-source">Justdial</div>
+       <div class="review-score">4.8 <span class="review-stars" aria-label="Rating 4.8 out of 5">★★★★★</span></div>
+       <p class="review-description">Based on 77 ratings shown on Justdial. Ratings may change over time.</p>
+       <a class="button secondary" href="https://www.justdial.com/Vadodara/Dreamz-Big-Realty-Opposite-Narayan-Garden-Gotri-Road/0265PX265-X265-190430145220-T1Q8_BZDET" target="_blank" rel="noopener noreferrer">Read Justdial reviews ↗</a>
+      </article>
+      <article class="review-card">
+       <div class="review-source">Google Reviews</div>
+       <h3 style="font-size: 25px; margin: 0;">Real experiences from our clients</h3>
+       <p class="review-description">Explore customer feedback and recent reviews directly on our Google listing.</p>
+       <a class="button secondary" href="https://www.google.com/search?q=dreamz%20big%20realty%20vadodara%20reviews" target="_blank" rel="noopener noreferrer">See Google reviews ↗</a>
+      </article>
+     </div>
+    </section>
     <section class="section" id="credentials">
      <div class="section-head">
       <div>
@@ -862,9 +1018,10 @@ a:focus-visible {
        </a>
       </div>
       <div class="contact-panel">
-       <h3>
-        Find us online
-       </h3>
+       <h3>Looking for a property?</h3>
+       <p class="review-description">Share your preferences and we'll help you find suitable options.</p>
+       <a class="button primary property-form-button" href="https://docs.google.com/forms/d/e/1FAIpQLSdmgzllD2il18-OdEeh8WHJdTkQA3Lx56KWXdgNKtBn56uWjQ/viewform" target="_blank" rel="noopener noreferrer">Submit property requirements ↗</a>
+       <h3 style="margin-top:24px">Find us online</h3>
        <div class="socials" id="socials">
         <a href="https://www.instagram.com/amitadahiya/" target="_blank" rel="noopener noreferrer">
          ◎ Instagram
@@ -878,7 +1035,7 @@ a:focus-visible {
         <a href="https://www.linkedin.com/in/amita-dahiya-40314a198/" target="_blank" rel="noopener noreferrer">
          in LinkedIn
         </a>
-        <a href="https://share.google/Uo5RWVMav9Ni93jzz" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.google.com/search?q=dreamz%20big%20realty%20vadodara%20reviews" target="_blank" rel="noopener noreferrer">
          ★ Google Reviews
         </a>
        </div>
