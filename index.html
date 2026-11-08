@@ -628,10 +628,6 @@ a:focus-visible {
     min-height: 43px;
     background: rgba(255,255,255,.035);
 }
-.socials a[aria-disabled="true"] {
-    opacity: .55;
-    cursor: not-allowed;
-}
   </style>
  </head>
  <body>
@@ -870,20 +866,17 @@ a:focus-visible {
         Find us online
        </h3>
        <div class="socials" id="socials">
-        <a aria-disabled="true" data-pending="" href="#" title="Link will be added">
-         ◎  Instagram
+        <a href="https://www.instagram.com/amitadahiya/" target="_blank" rel="noopener noreferrer">
+         ◎ Instagram
         </a>
-        <a aria-disabled="true" data-pending="" href="#" title="Link will be added">
-         f  Facebook
+        <a href="https://www.youtube.com/@dreamzbigrealty4709" target="_blank" rel="noopener noreferrer">
+         ▶ YouTube
         </a>
-        <a aria-disabled="true" data-pending="" href="#" title="Link will be added">
-         ▶  YouTube
+        <a href="https://www.linkedin.com/in/amita-dahiya-40314a198/" target="_blank" rel="noopener noreferrer">
+         in LinkedIn
         </a>
-        <a aria-disabled="true" data-pending="" href="#" title="Link will be added">
-         in  LinkedIn
-        </a>
-        <a aria-disabled="true" data-pending="" href="#" title="Link will be added">
-         &starf;  Google Reviews
+        <a href="https://share.google/Uo5RWVMav9Ni93jzz" target="_blank" rel="noopener noreferrer">
+         ★ Google Reviews
         </a>
        </div>
        <a class="button outline" href="https://wa.me/919998813459" rel="noopener noreferrer" style="margin-top:18px" target="_blank">
@@ -910,16 +903,6 @@ a:focus-visible {
    </footer>
   </div>
   <script>
-   document.querySelectorAll('a[data-pending]').forEach((link) => {
-            if (link.getAttribute('href') === '#') {
-                link.setAttribute('aria-disabled', 'true');
-                link.addEventListener('click', (event) => event.preventDefault());
-            } else {
-                link.removeAttribute('aria-disabled');
-                link.setAttribute('target', '_blank');
-                link.setAttribute('rel', 'noopener noreferrer');
-            }
-        });
 
         document.getElementById('year').textContent = new Date().getFullYear();
   </script>
