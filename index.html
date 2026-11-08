@@ -831,6 +831,85 @@ a:focus-visible {
                 width: 100%;
             }
         }
+  
+        .clients-heading-note {
+            max-width: 420px;
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .client-tile {
+            min-height: 154px;
+            background: linear-gradient(145deg, #102e50, #0a213b);
+            border: 1px solid var(--line);
+            border-radius: 17px;
+            padding: 22px 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 13px;
+            text-align: center;
+            transition: border-color .2s, transform .2s;
+        }
+
+        .client-tile:hover {
+            border-color: rgba(245,130,32,.55);
+            transform: translateY(-2px);
+        }
+
+        .client-logo-frame {
+            width: 100%;
+            height: 83px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .client-logo-frame img {
+            display: block;
+            max-width: 85%;
+            max-height: 80px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .client-logo-fallback {
+            font-size: clamp(17px, 2vw, 23px);
+            line-height: 1.2;
+            font-weight: 800;
+            color: var(--white);
+            letter-spacing: -.025em;
+        }
+
+        .client-name {
+            font-size: 12px;
+            font-weight: 650;
+            color: var(--muted);
+            line-height: 1.35;
+        }
+
+        @media (max-width: 600px) {
+            .clients-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+            .client-tile { min-height: 140px; padding: 15px 9px; gap: 8px; }
+            .client-logo-frame { height: 70px; }
+            .client-logo-frame img { max-width: 90%; max-height: 68px; }
+            .client-logo-fallback { font-size: 16px; }
+            .client-name { font-size: 11px; }
+        }
+
+        @media (max-width: 370px) {
+            .clients-grid { grid-template-columns: 1fr; }
+        }
+
   </style>
  </head>
  <body>
@@ -990,6 +1069,80 @@ a:focus-visible {
        </p>
       </article>
      </div>
+    </section>
+        <section class="section" id="clients">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Our network</div>
+          <h2>Our Clients</h2>
+        </div>
+        <p class="clients-heading-note">Organizations we have worked with across industries.</p>
+      </div>
+      <div class="clients-grid">
+          <div class="client-tile">
+            <div class="client-logo-frame">
+              <img src="assets/clients/deepak-nitrite.png" alt="Deepak Nitrite logo" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+              <span class="client-logo-fallback">Deepak Nitrite</span>
+            </div>
+            <span class="client-name">Deepak Nitrite</span>
+          </div>
+          <div class="client-tile">
+            <div class="client-logo-frame">
+              <img src="assets/clients/ami-lifesciences.jpeg" alt="Ami Lifesciences logo" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+              <span class="client-logo-fallback">Ami Lifesciences</span>
+            </div>
+            <span class="client-name">Ami Lifesciences</span>
+          </div>
+          <div class="client-tile">
+            <div class="client-logo-frame">
+              <img src="assets/clients/air-products.jpg" alt="Air Products logo" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+              <span class="client-logo-fallback">Air Products</span>
+            </div>
+            <span class="client-name">Air Products</span>
+          </div>
+          <div class="client-tile">
+            <div class="client-logo-frame">
+              <img src="assets/clients/tata.jpg" alt="Tata Company Limited logo" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+              <span class="client-logo-fallback">TATA</span>
+            </div>
+            <span class="client-name">Tata Company Limited</span>
+          </div>
+          <div class="client-tile">
+            <div class="client-logo-frame">
+              <img src="assets/clients/alembic-pharmaceuticals.jpg" alt="Alembic Pharmaceuticals Ltd logo" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+              <span class="client-logo-fallback">Alembic</span>
+            </div>
+            <span class="client-name">Alembic Pharmaceuticals Ltd</span>
+          </div>
+          <div class="client-tile">
+            <div class="client-logo-frame">
+              <img src="assets/clients/bank-of-baroda.png" alt="Bank of Baroda logo" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+              <span class="client-logo-fallback">Bank of Baroda</span>
+            </div>
+            <span class="client-name">Bank of Baroda</span>
+          </div>
+          <div class="client-tile">
+            <div class="client-logo-frame">
+              <img src="assets/clients/sbi.jpg" alt="State Bank of India (SBI) logo" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+              <span class="client-logo-fallback">SBI</span>
+            </div>
+            <span class="client-name">State Bank of India (SBI)</span>
+          </div>
+          <div class="client-tile">
+            <div class="client-logo-frame">
+              <img src="assets/clients/axis-bank.jpg" alt="Axis Bank logo" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+              <span class="client-logo-fallback">Axis Bank</span>
+            </div>
+            <span class="client-name">Axis Bank</span>
+          </div>
+          <div class="client-tile">
+            <div class="client-logo-frame">
+              <img src="assets/clients/hdfc-bank.jpg" alt="HDFC Bank logo" loading="lazy" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+              <span class="client-logo-fallback">HDFC Bank</span>
+            </div>
+            <span class="client-name">HDFC Bank</span>
+          </div>
+      </div>
     </section>
     <section class="section" id="reviews">
      <div class="section-head">
