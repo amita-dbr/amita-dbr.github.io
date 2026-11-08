@@ -749,6 +749,47 @@ a:focus-visible {
     .hero-socials a { font-size: 12px; }
     .request-link { justify-content: center; }
 }
+  
+        .review-author-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .review-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            background: rgba(245, 130, 32, 0.16);
+            border: 1px solid rgba(245, 130, 32, 0.4);
+            color: #ffb773;
+            font-weight: 800;
+        }
+
+        .review-author {
+            margin: 0;
+            font-size: 17px;
+        }
+
+        .review-date {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .featured-review .review-stars {
+            margin: 0;
+        }
+
+        .review-quote {
+            margin: 0;
+            color: var(--white);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
   </style>
  </head>
  <body>
@@ -924,11 +965,18 @@ a:focus-visible {
        <p class="review-description">Based on 77 ratings shown on Justdial. Ratings may change over time.</p>
        <a class="button secondary" href="https://www.justdial.com/Vadodara/Dreamz-Big-Realty-Opposite-Narayan-Garden-Gotri-Road/0265PX265-X265-190430145220-T1Q8_BZDET" target="_blank" rel="noopener noreferrer">Read Justdial reviews ↗</a>
       </article>
-      <article class="review-card">
-       <div class="review-source">Google Reviews</div>
-       <h3 style="font-size: 25px; margin: 0;">Real experiences from our clients</h3>
-       <p class="review-description">Explore customer feedback and recent reviews directly on our Google listing.</p>
-       <a class="button secondary" href="https://www.google.com/search?q=dreamz%20big%20realty%20vadodara%20reviews" target="_blank" rel="noopener noreferrer">See Google reviews ↗</a>
+      <article class="review-card featured-review">
+       <div class="review-source">Google Reviews · Featured client review</div>
+       <div class="review-author-row">
+        <div class="review-avatar" aria-hidden="true">P</div>
+        <div>
+         <h3 class="review-author">Pooja Patel</h3>
+         <span class="review-date">Google review</span>
+        </div>
+       </div>
+       <div class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+       <blockquote class="review-quote">Professionalism, punctuality, clear communication, politeness are some excellent attributes that describe Ms. Amita, but what makes she stand out is that she understands what her clients want and she goes above and beyond her professional commitment when her clients genuinely need her help. I highly recommend her Realty services as she is trustworthy and reliable.</blockquote>
+       <a class="button secondary" href="https://www.google.com/search?q=dreamz%20big%20realty%20vadodara%20reviews" target="_blank" rel="noopener noreferrer">Read reviews on Google ↗</a>
       </article>
      </div>
     </section>
